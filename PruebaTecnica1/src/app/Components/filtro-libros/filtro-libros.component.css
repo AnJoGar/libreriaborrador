@@ -1,0 +1,14 @@
+.filtro-libros-container {
+    position: absolute;
+    top: 58px;
+    left: 15%;
+    right: 0;
+    z-index: 1; /* Ajusta el índice z según sea necesario */
+    color: white;
+    background-color: #203254;
+    
+  }
+
+  .custom-mat-select {
+    background-color: #203254; /* Puedes ajustar el color según tus preferencias */
+  }

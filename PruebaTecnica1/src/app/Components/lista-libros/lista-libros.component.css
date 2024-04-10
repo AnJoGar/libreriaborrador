@@ -1,0 +1,18 @@
+.libros-container {
+    margin-bottom: 100px; 
+    color: white;
+   
+    /* You can adjust the value to increase or decrease the space */
+  }
+
+  .principal{
+
+    background-color: #203254  ;
+  }
+ 
+  ::ng-deep .mat-tab-link {
+    color: white ;
+  }
+  .titulo-libros {
+    margin-left: 45%; /* Puedes ajustar este valor según tus necesidades */
+  }

@@ -1,0 +1,16 @@
+
+<div class="filtro-libros-container">
+    <mat-form-field class="custom-mat-select">
+      <mat-label>Seleccionar Género</mat-label>
+      <mat-select [(ngModel)]="filtroGenero" (ngModelChange)="onGeneroChange()">
+        <mat-option value="">Todos</mat-option>
+        <mat-option *ngFor="let gen of genero" [value]="gen">
+          {{ gen }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  
+
+

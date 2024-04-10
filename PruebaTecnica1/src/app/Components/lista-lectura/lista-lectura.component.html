@@ -1,0 +1,45 @@
+
+<div class="contenedor-principal">
+  <app-filtro-libros [genero]="genero"[(filtroGenero)]="filtroGenero" (filtroGeneroChange)="filtrarLibrosPorGenero()"></app-filtro-libros>
+  <div class="pagina">
+    <label for="paginaSlider">Filtrar por Página:</label>
+    <input type="range" id="paginaSlider" min="1" max="2000" [(ngModel)]="filtroPaginasInput">
+    <span>{{ filtroPaginasInput }}</span>
+   
+  </div>
+</div>
+<div>
+  
+
+  
+
+</div>
+
+<div class="contenedor-libros">
+
+  <div>
+  
+    <ul>
+      <li *ngFor="let libro of  librosaleer   | paginate: { itemsPerPage: 4, currentPage: p }" class="libro-item">
+       <div class="imagenes">
+        <img [src]="libro.book.cover" alt="{{ libro.book.genre }}" />
+  
+       </div>
+              
+        <div class="info-libro">
+          <h3>{{ libro.book.title }}</h3>
+          <p><strong>Genre:</strong> {{ libro.book.genre }}</p>
+          <p><strong>Pages:</strong> {{ libro.book.pages }}</p>
+        </div>
+  
+  
+        
+        <button mat-raised-button color="warn" (click)="selectBook(libro)">Seleccionar</button>
+       
+      </li>
+    </ul>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+  
+
+</div>

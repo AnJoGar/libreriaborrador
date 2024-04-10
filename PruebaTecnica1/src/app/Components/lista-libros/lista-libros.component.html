@@ -1,0 +1,35 @@
+<!--lista-libros html-->
+<div class="principal">
+
+  <div class="libros-container">
+    <h2 class="titulo-libros">Librería CR7</h2>
+  
+  </div>
+  
+  
+  
+  <div class="personalizado" >
+    <ng-template #noLibros>
+      <!-- Si no hay libros después de aplicar el filtro -->
+      <p>No hay libros disponibles con el género seleccionado.</p>
+    </ng-template>
+   
+    <nav mat-tab-nav-bar style="background-color:#242A4F 
+    ; color:red"  >
+      <a mat-tab-link
+        *ngFor="let link of navLinks; let i = index"
+        [routerLink]="link.link"
+        routerLinkActive #rla="routerLinkActive"
+        [active]="rla.isActive"
+        
+      >
+        {{ link.label}} 
+
+      </a>
+      
+    </nav>
+  </div>
+
+</div>
+
+
